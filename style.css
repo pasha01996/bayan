@@ -1,0 +1,132 @@
+/* Main */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f5f5eb;
+}
+
+.wrapper {
+    padding-left: calc(50vw - 30rem);
+    padding-right: calc(50vw - 30rem);
+}
+
+
+/* h1 */
+
+h1 {
+    font-weight: 800;
+}
+
+
+/* Item */
+
+li  {
+    list-style-type: none;
+    margin-bottom: 0.3rem;
+    border-top: 1px solid #dbdbdb;
+}
+
+
+/* Lable */
+
+label {
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas:
+    "span span i"
+    "img img img";
+}
+
+
+/* Title */
+
+span {
+    grid-area: span;
+    padding: 10px 15px;
+    font-weight: 800;
+    color: #0c60d9;
+    cursor: pointer;
+}
+
+input:checked ~ span {
+    color: #000000;
+}
+
+ul:hover  span {
+    color: #000000;
+}
+
+li:active span {
+    color: #0c60d9;
+}
+
+
+/*  I / .icon */
+i { 
+    color: #0c60d9;
+    grid-area: i;
+    font-weight: 800;
+    font-size: 2rem;
+    transition: transform 0.2s;
+}
+
+input:checked ~ i {
+    transform: rotate(45deg);
+    color: #000000;
+}
+
+ul:hover i {
+    color: #000000;
+}
+
+label:hover i {
+    transform: rotate(45deg);
+}
+
+li:active i {
+    color: #0c60d9;
+}
+
+
+/* Input */
+
+input {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+
+/* Img */
+
+img {
+    grid-area: img;
+    height: 0;
+    width: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+li:hover img {
+    height: 500px;
+    width: 500px;
+    padding: 10px 5px 5px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+input:checked ~ img {
+    height: 500px;
+    width: 500px;
+    padding: 10px 5px 5px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+
